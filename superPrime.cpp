@@ -4,6 +4,8 @@ class Number {  //数字类，含有分离数字、判断素数的操作，数据成员为一个int型常量m
 public:
 	Number(int num) :mNum(num) { //const类型的初始化
 	}
+	Number(const Number& n) :mNum(n.mNum) {
+	}
 	~Number();
 	NumberSet split() {  //将数字按位分离
 		NumberSet ns;
